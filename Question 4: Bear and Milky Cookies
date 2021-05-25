@@ -1,0 +1,48 @@
+//algorithm bear_milky_cookies()
+//input:read the input string specifies, what bear did in each minute(whether ate cookies or drunk milk)
+//output:display the result that the bear followed the parent instructions
+
+step1:check the given input obeys the constraints
+        1<=T<=50 and 1<=N<=50
+step2:tranverse the given string array and check the instruction is followed
+step3:if instruction follwed print "YES" else "NO"
+step4:stop
+
+
+
+//implementation of the above algorithm
+#include<iostram>
+using namespace std;
+
+void check(string a[],int N)
+{
+  int i=0;
+  while(i<N-1;i++)//check the condition is following or not
+  {
+      if(a[i]=="cookie"&&a[i+1]=="milk")//if milk after cookie then ncrement i by 2 to check remaining minutes
+       {i+=2;}
+      else if(a[i]=="milk")//if i is milk then it follows the rule then increment i by 1 to continue the loop
+       {i++;}
+      else
+      {cout<<"NO";return;}//if no milk after the cookie then print "NO"
+   }//closing while loop
+   if(a[N-1]=="cookie")//check for boundary value
+   {cout<<"NO";return:}
+   cout<<"YES";//if condition satisfied then print "YES"
+}
+
+void main()
+{
+  int T;
+  cin>>T;
+  while(T--)
+  {
+    cin>>N;
+    string a[N];
+    for(int i=0;i<n;i++)
+    {
+      cin>>a[i];
+    }//closing for loop
+    check(a,N)      //function call
+   }//closing while loop
+}//closing main()
