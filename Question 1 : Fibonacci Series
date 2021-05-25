@@ -1,1 +1,61 @@
-s
+
+//functiom to check fibonacci sequence in the string
+void fib(string str)
+{
+//find the count of each characters in a string
+map <char,int> count_map;
+int i;
+for(i=0;i<=st.length();i++)
+    count_map[st[i]]++;
+
+//check atleast 3 different characters present int the string
+int n=count_map.size();
+if(n<3) cout<<"wrong input";return;
+
+//get the frquency count of each character and store into the veactor
+vector<int> v;int a=0;
+for(auto ptr=count_map.begin();ptr!=count_map.end();ptr++)
+  { 
+    v[a]=ptr->second;
+    a++;
+   }
+   
+   //check for fibonocci squence in the character counts stored in vector v
+   bool flag=true;
+for(i=3;i<=n;i++)
+{
+  if(v[i]!=v[i-1]+v[i-2])
+    {
+      flag=false;
+      break;
+      }
+  }
+  
+  //print the result
+  
+  if(flag)
+  {
+  cout<<"Dynamic";
+  return;
+  }
+  else
+  cout<<"Not";
+  return;
+  }//close of the function fibonacci
+  
+  //main() to intiate the execution
+  void main()
+  {
+  int t;
+  cout<<"enter value fot t";//no of test case required
+  for(int i=0;i<t;i++)
+  {
+  string s;
+  cout<<"enter string";
+  cin>>s;
+  fib(s);//calling the function
+  }//closing for loop
+  }//closing of main()
+      
+  
+
