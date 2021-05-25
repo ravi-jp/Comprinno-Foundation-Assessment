@@ -1,0 +1,58 @@
+alogrithm  templeland()
+//input:read the strip and it parts height
+//output:decision yes/no
+step 1:Read the strip values and store into an array
+        for(i=0;i<n;i++)
+          cin>>a[i]
+step 2:check for unique centre part
+        if(n%2!=0)return "no"
+step 3:check the condition hi1=1
+          a[0]==1 else "no"
+step 4:check left part of centre is increasing by 1
+        no=1;for(i=0;i<=n/2;i++)
+        if(no!=a[i]) return "no";no++
+step 5:check right part of centre in decreassing by 1
+        no=[n/2]for(i=n/2;i<n;i++)
+          if(no!=a[i])return "no";no--
+step 6:return "yes"
+step 7:stop
+
+
+
+//program to implement above algorithm
+#include<iostram>
+using namespace std;
+
+string templeland(int a[],int n)//function to make decision
+{
+  if(n%2!=0) return "no";//check for 1st condition that is centre exist or not
+  if(a[0]!=1) return "no";//check 2nd condition-1st elemet must 1
+  int num=1;
+  for(int i=0;i<=n/2;i++)//check 3rd condition that left part must in increasing order,increaed by 1 
+  {
+      if(a[i]!=num) return "no";
+      num++;
+  }
+  num=a[n/2];
+  for(int i=n/2;i<n;i++)//check 4 th condition -right part must be in decreasing order,decrease by 1
+  {
+      if(a[i]!=num) return "no";
+      num--;
+  }
+  return "yes";//if all condtion holds then the particular strip is feasibile
+ }//closing the function
+  
+void main()//main method
+{
+  int t;
+  cin>>t;//no of testcase 
+  while(t--)
+  {
+      int n;
+      cin>>n;//size of the strip
+      int a[n];
+      for(int i=0;i<n;i++)
+        cin>>a[i];//reading parts values of a strip
+       cout<<templeland(a,n);//function call 
+  }
+}
