@@ -1,0 +1,44 @@
+algorithm two_numbers()
+//input:number of turns N,Alice and Bob values
+//output:value got from division of final bob and alice values
+
+step 1:read the N,A abd B values
+step 2:find the N%2(N modulus 2)
+step 3:check the compluted modulus and multiply a with 2 if raminder is 1
+        if(N%2==1) then a*=2;
+step 4:find the max and min value of a,b
+step 5:print the result
+        cout<<max/min;
+step 6:stop
+
+
+
+
+//following code implemts the above algorithm
+
+#include<iostream>
+#include<algorithm>
+
+void Two_numbers(int a,int b,int N//function to give result
+{
+  if(N2==1)//no of turns value is decreased to 1/0 from N turns
+  {
+    a=a*2;//if N is odd then turns will become 1 and that turn given to alice
+  }
+  //if N is even then no turn will given, this results same as giveing equal turns
+  cout<<max(a,b)/min(a,b);//dividing max of a and b by minimun of a and b
+}
+
+void main()
+{
+int T;
+cin>>T;
+while(T--)
+ {
+  int a,b,n;
+  cin>>a>>b>>n;
+  Two_numbers(a,b,n);//function call
+ }//closing while loop
+}//closing main()
+
+    
