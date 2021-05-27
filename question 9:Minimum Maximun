@@ -1,0 +1,34 @@
+  algorithm minimum_maximum()
+//input:Array of N distinct elements
+//output:Minimum cost required to convertr N size array into 1 element array
+
+step 1:read the N distinct array elements 
+step 2:sort the array to find the minimum element
+step 3:mulfiply the a[0]/smallest element with (N-1) to get minimum cost
+        cout<<a[0]*(N-1)
+step 4: stop
+
+
+//implementing of the above algorithm
+
+#include<iostream>
+#include<algorithm>
+
+void main()
+{
+  int T;
+  cin>>T;//t test cases
+  while(T--)
+  {
+    int N;
+    cin>>N;
+    long int a[N];
+    for(int i=0;i<N;i++)//read the N distinct elements
+    {
+      cin>>a[i];
+     }
+     sort(a,a+N);//sort the elements
+     //after sorting a[0] contains smallest element and other n-1 elements will removed with a[0]*(n-1) cost
+     cout<<a[0]*(N-1);//computes the result and prints the console
+   }//closing while loop
+ }//closing main()
