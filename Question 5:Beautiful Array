@@ -1,0 +1,50 @@
+algorithm beaitiful_arraay()
+//input:array size and n numbers
+//output:the decision whether the array is beautiful or not
+step 1:take the input for the array
+step 2:count the no.of 0,1,-1 in the array.
+       Others then mentioned numbers treated as one category and counted them.
+step 3:if array need to be beautiful, it should be satisfy the following criteria
+          a.array should not have other numbers(except 0,1,-1) more the one.
+          b.it not satisfy (numbers count is equal to 1 and -1 count greater then 0)
+          c.it must not satisfy(-1 greater than 1 && count of 1 less than 1)
+step 4:if array satisfies the above condition then print "yes"(array is beautiful)
+        elase print "not"(not beautiful)
+step 5:stop
+
+
+//implementing of the above algorithm
+
+//function which makes the decision
+void beautiful_array(int a[],int n)
+{
+int count_1=0,count_0=0;count_neagative_1=0,count_other=0;
+  for(int i=0;i<n;i++)//counting the particulars numbers
+  {
+    if(a[i]==0) count_0++;
+    else if(a[i]==-1) count_negative_no++;
+    else if(a[i]==1) count_1++;
+    else count_other++;
+  }
+  if(count_other>1) cout<<"no"; return;//checking the condition,whether array not satisfies the criteria
+  else if(count_negative_no>0 && count_other==1) cout<<"no"; return;
+  else if(count_1<1 && count_negative_no>1) cout<<"no"; return;
+  else cout<<"yes"; return;//array not satisfies the above mentioned conditions in ifelse then "yes" printed
+}
+
+void main()//main function to start the execution
+{
+int T;
+cin>>T;
+while(T--)
+{
+  int n;
+  cin>>n;//no of elements in the array
+  int a[n];
+  for(int i=0;i<n;i++)
+  {
+      cin>>a[i];//read the array elemets
+  }
+  beautiful_array(a,n);//function call
+ }//closing while loop
+}//closing main()
