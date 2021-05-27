@@ -1,0 +1,50 @@
+  algorithm id_ship()
+//inptut:the lower/upper case of b,c,d,f
+//output:the string describe the character
+
+step 1:take the character as input
+step 2:compare the input character with b,c,d,f
+step 3:display the respective string 
+step 4:stop
+
+
+//implementing the above algorithm
+
+#include<iostram>
+using namespace std;
+
+void id_ship(char c)//function to give the result
+{
+if(c=='B'||c=='b')//comparing input with B/b
+{
+  cout<<"BattleShip"<<endl;//if matches "BattleShip" is printed and returned to main
+ }
+else if(c=='C'||c=='c')//comparing c/C
+{
+  cout<<"Cruiser"<<endl;
+  
+ }
+ else if(c=='D'||c=='d')//comparing D/d
+{
+  cout<<"Destroyer"<<endl;
+  
+ }
+else if(c=='F'||c=='f')//comparing F/f
+{
+  cout<<"Frigate"<<endl;
+}
+}//closing the function
+
+
+
+void main()
+{
+  int T;
+  cin>>T;
+  while(T--)
+  {
+    char c;
+    cin>>c;//reading the input character
+    id_ship(c);//function call
+   }
+ }
