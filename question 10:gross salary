@@ -1,0 +1,59 @@
+  algorithm gross_salary()
+//input:basic salary as input
+//output:gross salary is printed
+
+step 1:read the basic salay as input
+step 2:compare whether basic salary<1500
+        if(basic_salary<1500)
+        {
+          HRA=0.1*basic_pay;
+          DA=0.9*basic_pay;
+         }
+ step 3:if basic_salary>=1500
+          {
+            HRA=500;
+            DA=.98*basic_pay;
+          }
+step 4:compute the result gross_salary
+            gross_salary=basic_pay+HRA+DA;
+step 5:print the result
+        cout<<gross_salary
+step 6:stop
+
+//implementing the above algorithm
+
+#include<iostream>
+
+void gross_salary(float basic_pay)//function calculated the result
+{
+float HRA,DA,gross_salary;
+if(basic_pay<1500)//computing hra,da as per crieria that is basic pay<1500
+{
+  HRA=0.1*basic_pay;
+  DA=0.9*basic_pay;
+ }
+ if(basic_pay>=1500)//if basic pay >=1500
+ {
+    HRA=500;
+    DA=0.98*basic_pay;
+  }
+  gross_salary=basic_pay+HRA+DA;//computing the gross salary
+  cout<<gross_salary;//prints the results
+}closing the function
+
+
+
+
+void main()
+{
+  int T;
+  cin>>T;
+  while(T--)
+  {
+    float basic_salary;
+    cin>>basic_salary;//reading the input
+    gross_salary(baisc_pay);//function call
+  }//closing while loop
+}//closing the main()
+      
+    
