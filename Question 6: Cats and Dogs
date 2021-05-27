@@ -1,0 +1,65 @@
+  algorithm cats_and_dogs()
+//input:No of cats,dogs he has and counted legs
+//output:decision yes/no on possiblities of count being correct
+
+step 1: read the inputs that is dogs and cats count and counted value of legs
+step 2:check counted value is completly dicivided by 4
+          if(count_legs%4!=) cout<<"no"
+step 3:check whether dogs legs are not counted properly
+          if(dogs*4>count_leg) cout<<"no"
+step 4:find minumum no.of cats present on the ground
+                min=0
+                num=cats-2*dogs
+                if(num>0)
+                {
+                min=num*4;//min holds the leg count of cats for these no dogs are available for ride, so they must be grounded
+                }
+step 5:check cats leg(min counted in above step) present in the count_legs
+          if(min<=(count_leg-4*dogs))
+          {
+              cout<<"yes";//possiblity of correct is present, so print as "yes"
+          }
+          else 
+          cout<<"no";min legs are not counted
+ step 6:stop
+ 
+ 
+ //implementinf the above algorithm
+ 
+ void cats_and_dogs(int cats,int dogs,int count_legs)
+ {
+    int min=0,num=0;
+    if(count_legs%4!=0) {cout<<"no";return;}//check for odd legs which is wrong
+    if(dogs*4>count_legs){cout<<"no";return;}//check wheter dogs legs are not counted correctly
+    num=cats-2*dogs;//finding min no of cats grounded 
+    if(num>0)
+    {
+        min=num*4;//grounted cats * 4 , to get total cats legs should be counted
+    }
+    if(min<=(count_legs-4*dogs))//check grounded cats are counted or not
+    {
+      cout<<"yes";//if grounded cats are counted
+      return;
+     }
+     else
+     cout<<"no";//if count_legs is wrong
+   }//closing of the function
+   
+   
+   void main()//main function to start the execution
+   {
+    int T;
+    cin>>T;
+    while(T--)
+    {
+      int c,d,l;
+      cint>>c;//reading inputs
+      cin>>d
+      cin>>l;
+      cats_and_dogs(c,d,l);//function call
+     }//closing while loop
+   }//closing main()
+   
+ 
+          
+ 
