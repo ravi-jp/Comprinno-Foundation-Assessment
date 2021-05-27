@@ -19,7 +19,7 @@ step 6:stop
 #include<iostream>
 #include<algorithm>
 
-void Two_numbers(int a,int b,int N//function to give result
+void Two_numbers(long long int a,long long int b,long long int n) N//function to give result
 {
   if(N2==1)//no of turns value is decreased to 1/0 from N turns
   {
@@ -35,7 +35,7 @@ int T;
 cin>>T;
 while(T--)
  {
-  int a,b,n;
+  long long int a,b,n;
   cin>>a>>b>>n;
   Two_numbers(a,b,n);//function call
  }//closing while loop
